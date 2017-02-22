@@ -8,4 +8,4 @@ The app still reads the feed from "Le Monde" but is built differently, i hope it
 * Butterknife (still a good idea for a small project like this)
 * Picasso (still a good idea too since i don't modify the pictures)
 * Retrofit for getting the feed, seems like a better choice
-* DbFlow (lighter than Realm)
+* DbFlow for the database (lighter than Realm)
