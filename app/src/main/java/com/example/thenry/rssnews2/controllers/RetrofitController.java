@@ -5,9 +5,9 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.thenry.rssnews2.api.NewsService;
-import com.example.thenry.rssnews2.dao.Article;
-import com.example.thenry.rssnews2.model.FeedArticle;
-import com.example.thenry.rssnews2.model.RssFeed;
+import com.example.thenry.rssnews2.model.Article;
+import com.example.thenry.rssnews2.api.FeedArticle;
+import com.example.thenry.rssnews2.api.RssFeed;
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 
 import retrofit2.Call;
@@ -53,7 +53,7 @@ public class RetrofitController implements Callback<RssFeed> {
             SQLite.delete(Article.class); // on nettoie la bdd
             RssFeed rssFeed = response.body();
 
-            for (FeedArticle feedArticle : rssFeed.getArticleList()) {
+            for (FeedArticle feedArticle : rssFeed.getChannel().getArticleList()) {
                 Article article = new Article();
                 article.setTitle(feedArticle.getTitle());
                 article.setDate(feedArticle.getDate());

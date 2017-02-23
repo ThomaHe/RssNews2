@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.thenry.rssnews2.R;
-import com.example.thenry.rssnews2.dao.Article;
+import com.example.thenry.rssnews2.model.Article;
 import com.example.thenry.rssnews2.ui.ItemClickListener;
 import com.squareup.picasso.Picasso;
 

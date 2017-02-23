@@ -1,5 +1,6 @@
 package com.example.thenry.rssnews2.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +11,7 @@ import android.view.View;
 import com.example.thenry.rssnews2.R;
 import com.example.thenry.rssnews2.controllers.RecyclerAdapter;
 import com.example.thenry.rssnews2.controllers.RetrofitController;
-import com.example.thenry.rssnews2.dao.Article;
+import com.example.thenry.rssnews2.model.Article;
 import com.raizlabs.android.dbflow.sql.language.SQLite;
 
 import java.util.List;
@@ -59,11 +60,11 @@ public class NewsActivity extends AppCompatActivity implements ItemClickListener
 
     @Override
     public void onClick(View view, int position){
-        /*int key = realm.where(Article.class).findAll().get(position).getId();
+        int key = articleList.get(position).getId();
         Intent myIntent = new Intent(this, DetailsActivity.class);
         Bundle extras = new Bundle();
         extras.putInt("idArticle",key);
         myIntent.putExtras(extras);
-        startActivity(myIntent);*/
+        startActivity(myIntent);
     }
 }

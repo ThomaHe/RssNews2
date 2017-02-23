@@ -1,4 +1,4 @@
-package com.example.thenry.rssnews2.dao;
+package com.example.thenry.rssnews2.model;
 
 import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;

@@ -1,4 +1,4 @@
-package com.example.thenry.rssnews2.model;
+package com.example.thenry.rssnews2.api;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
@@ -23,9 +23,15 @@ public class FeedArticle {
     @Element(name = "enclosure")
     private Enclosure enclosure;
 
-    private class Enclosure {
+    private static class Enclosure {
         @Attribute(name = "url")
         private String url;
+
+        @Attribute(name = "type")
+        private String type;
+
+        @Attribute(name = "length")
+        private int length;
     }
 
 
@@ -66,4 +72,13 @@ public class FeedArticle {
         return enclosure.url;
     }
 
+    public FeedArticle(String title, String description, String date, Enclosure enclosure) {
+        this.title = title;
+        this.description = description;
+        this.date = date;
+        this.enclosure = enclosure;
+    }
+
+    public FeedArticle() {
+    }
 }
